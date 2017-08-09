@@ -1,0 +1,79 @@
+$text: palevioletred;
+body {
+  color: $text;
+  margin: 0;
+  p {
+    font-size: 1em;
+  }
+}
+
+html {
+  background-color: #8f8;
+  font-size: 16px;
+}
+
+// main setup
+
+main {
+  margin: 0 0;
+}
+
+// header and footer
+
+header, footer {
+  text-align: center;
+  padding: 1em;
+}
+
+#icon {
+  $size: 2.5em;
+  height: $size;
+  background: no-repeat url("assets/favicon-96x96.png");
+  background-size: $size;
+  background-position: center;
+}
+
+// main content
+
+main {
+  $size: 0.5em;
+  color: red;
+  .bar {
+    text-align: right;
+    height: 2em;
+    #controls {
+      text-align: center;
+      z-index: 1;
+      color: $text;
+    }
+    button {
+      font-size: 1em;
+      height: 2em;
+      width: 4em;
+    }
+    #generation, #fps {
+      position: relative;
+      top: -2em;
+      z-index: -1;
+    }
+  }
+  .gameBoard {
+    max-width: 32em;
+    margin: auto;
+  }
+  p {
+    font-family: Courier New, Courier, monospace;
+    color: $text;
+  }
+  .block {
+    display: inline-block;
+    height: $size;
+    width: $size;
+    &:hover {
+      background-color: violet; 
+    }
+  }
+  .block-line {
+    height: $size;
+  }
+}
